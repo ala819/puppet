@@ -1,0 +1,31 @@
+node default {}
+node 'stapp01.stratos.xfusioncorp.com' {
+include ssh_node1
+}
+node 'stapp02.stratos.xfusioncorp.com' {
+include ssh_node2
+}
+node 'stapp03.stratos.xfusioncorp.com' {
+include ssh_node3
+}
+class ssh_node1 {
+ssh_authorized_key { 'root@jump_host':
+user => 'tony',
+type => 'ssh-rsa',
+key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCd+DHaBVFuROkns/i4OkvNBzb1aRXIYzu7dR7/HmodmMzKcwq9Ttg9lJ8S1uHoIU/zG3fSdwtU74G5IPekVAlzS6UDNH3rPuxrzoVSBzOsEY3KPufAuvFkPFUmTSGvgXopFuX3eHoeWXoaiayZG6iPi31bpKpGBDFUKpGKXBtFrJ++bewRh9oCEP9Wok6ydb62NSVNiIoJ/8v2Vw//w6OE+/op2YWnHouWBEU+qlQPz3UOSs0zBSOLUw3cCoDkt11bJM1IRoOta6W3R3btDa51foRlI0bL0YCAfv+iYGiNKwGrD/X6fuA5/r4lAH1qwXzOTXeyDrMkzps1GohEeo/V',
+}
+}
+class ssh_node2 {
+ssh_authorized_key { 'root@jump_host':
+user => 'steve',
+type => 'ssh-rsa',
+key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCd+DHaBVFuROkns/i4OkvNBzb1aRXIYzu7dR7/HmodmMzKcwq9Ttg9lJ8S1uHoIU/zG3fSdwtU74G5IPekVAlzS6UDNH3rPuxrzoVSBzOsEY3KPufAuvFkPFUmTSGvgXopFuX3eHoeWXoaiayZG6iPi31bpKpGBDFUKpGKXBtFrJ++bewRh9oCEP9Wok6ydb62NSVNiIoJ/8v2Vw//w6OE+/op2YWnHouWBEU+qlQPz3UOSs0zBSOLUw3cCoDkt11bJM1IRoOta6W3R3btDa51foRlI0bL0YCAfv+iYGiNKwGrD/X6fuA5/r4lAH1qwXzOTXeyDrMkzps1GohEeo/V',
+}
+}
+class ssh_node3 {
+ssh_authorized_key { 'root@jump_host':
+user => 'banner',
+type => 'ssh-rsa',
+key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCd+DHaBVFuROkns/i4OkvNBzb1aRXIYzu7dR7/HmodmMzKcwq9Ttg9lJ8S1uHoIU/zG3fSdwtU74G5IPekVAlzS6UDNH3rPuxrzoVSBzOsEY3KPufAuvFkPFUmTSGvgXopFuX3eHoeWXoaiayZG6iPi31bpKpGBDFUKpGKXBtFrJ++bewRh9oCEP9Wok6ydb62NSVNiIoJ/8v2Vw//w6OE+/op2YWnHouWBEU+qlQPz3UOSs0zBSOLUw3cCoDkt11bJM1IRoOta6W3R3btDa51foRlI0bL0YCAfv+iYGiNKwGrD/X6fuA5/r4lAH1qwXzOTXeyDrMkzps1GohEeo/V',
+}
+}
