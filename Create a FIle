@@ -1,0 +1,6 @@
+node default {}
+node 'stapp02.stratos.xfusioncorp.com' {file {"news.txt":
+ path =>"/opt/finance/news.txt",
+ ensure =>present,
+}
+}
